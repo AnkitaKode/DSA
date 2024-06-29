@@ -44,7 +44,6 @@ public class RadixSort {
             countingSort(arr, exp);
         }
     }
-
     
     private static void printArray(int[] arr) {
         for (int j : arr) {
