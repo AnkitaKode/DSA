@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Stack;
 
 public class InfixToPrefix {
 
@@ -105,11 +105,10 @@ public class InfixToPrefix {
         return prefix;
     }
 
-    // Driver code
+
     public static void main(String[] args) {
         String s = "x+y*z/w+u";
         System.out.println("Infix Expression: " + s);
         System.out.println("Prefix Expression: " + infixToPrefix(s.toCharArray()));
     }
 }
-
