@@ -7,7 +7,7 @@ public class BinarySearchTree {
         Node right;
 
         public Node(int data) {
-            // Assign data to the new node, set left and right children to null
+
             this.data = data;
             this.left = null;
             this.right = null;
@@ -21,7 +21,6 @@ public class BinarySearchTree {
         root = null;
     }
 
-    // factorial()
     public int factorial(int num) {
         int fact = 1;
         if (num == 0)
@@ -35,11 +34,12 @@ public class BinarySearchTree {
         }
     }
 
-    // numOfBST() will calculate the total number of possible BST by calculating Catalan Number for given key
+    // numOfBST() will calculate the total number of possible BST by calculating
+    // Catalan Number for given key
     public int numOfBST(int key) {
 
         int catalanNumber = factorial(2 * key) / (factorial(key + 1) * factorial(key));
-        
+
         return catalanNumber;
     }
 
