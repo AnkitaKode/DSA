@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
-public class Dijkstra {
+public class DijkstraAlgorithm {
 
     static class Node implements Comparable<Node> {
         int v;
@@ -120,7 +120,7 @@ public class Dijkstra {
         }
         int S = 1;
 
-        int[] result = Dijkstra.dijkstra(
+        int[] result = DijkstraAlgorithm.dijkstra(
                 V, adj, S);
         System.out.println(Arrays.toString(result));
     }
