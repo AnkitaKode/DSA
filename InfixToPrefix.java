@@ -65,7 +65,8 @@ public class InfixToPrefix {
                 }
                 charStack.pop();
             } else {
-                while (!charStack.isEmpty() && isOperator(charStack.peek()) && getPriority(c) <= getPriority(charStack.peek())) {
+                while (!charStack.isEmpty() && isOperator(charStack.peek())
+                        && getPriority(c) <= getPriority(charStack.peek())) {
                     output.append(charStack.pop());
                 }
                 charStack.push(c);
@@ -104,7 +105,6 @@ public class InfixToPrefix {
 
         return prefix;
     }
-
 
     public static void main(String[] args) {
         String s = "x+y*z/w+u";
