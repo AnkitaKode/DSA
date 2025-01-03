@@ -14,7 +14,8 @@ public class DijkstraAlgorithm {
             this.distance = distance;
         }
 
-        @Override
+        @Override 
+        
         public int compareTo(Node n) {
             if (this.distance <= n.distance) {
                 return -1;
