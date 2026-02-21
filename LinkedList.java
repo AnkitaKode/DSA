@@ -6,7 +6,6 @@ public class LinkedList {
         list.insert(18);
         list.insert(22);
         list.insert(82);
-
         list.show();
     }
 
