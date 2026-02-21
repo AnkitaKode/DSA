@@ -7,7 +7,7 @@ public class MergeSort {
             mergeSort(nums, l, mid);
             mergeSort(nums, mid + 1, r);
 
-            merge(nums, l, mid, r);  // Call merge to merge the sorted halves
+            merge(nums, l, mid, r); // Call merge to merge the sorted halves
         }
     }
 
