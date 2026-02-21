@@ -7,7 +7,7 @@ public class QuickSort {
             quickSort(nums, low, pi - 1);
             quickSort(nums, pi + 1, high);
         }
-    }
+    } 
 
     private static int partition(int[] nums, int low, int high) {
         int pivot = nums[high];
