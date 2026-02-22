@@ -3,7 +3,6 @@ import java.util.ArrayList;
 // Cycle Detection for Undirected Graph 
 public class CycleDetectionUndirected {
 
-    // Edge class
     static class Edge {
         int src;
         int dest;
