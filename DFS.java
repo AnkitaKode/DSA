@@ -1,6 +1,6 @@
 import java.util.*;
 
-//Depth First Search (DFS) + Undirected Graph + Adjacency List + O(V + E)
+//Undirected Graph + Adjacency List + O(V + E)
 class DFS {
 
     public void dfs(int curr, boolean[] visited, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> result) {
