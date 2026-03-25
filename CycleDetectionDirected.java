@@ -26,9 +26,7 @@ public class CycleDetectionDirected {
         graph[3].add(new Edge(3, 0));
     }
 
- 
     public static boolean isCycleDirected(ArrayList<Edge> graph[], boolean vis[], int curr, boolean rec[]) {
-
         vis[curr] = true;
         rec[curr] = true;
 
