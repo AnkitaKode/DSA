@@ -1,7 +1,30 @@
 import java.util.ArrayList;
 
-// Cycle Detection for Undirected Graph 
 public class CycleDetectionUndirected {
+
+    // Cycle Detection for Undirected Graph
+    public static boolean isCycleUndirected(ArrayList<Edge> graph[], boolean vis[], int curr, int parent) {
+
+        vis[curr] = true;
+
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+
+            // Case 1: Not visited → DFS
+            if (!vis[e.dest]) {
+                if (isCycleUndirected(graph, vis, e.dest, curr)) {
+                    return true;
+                }
+            }
+
+            // Case 2: Visited but not parent → Cycle
+            else if (e.dest != parent) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     static class Edge {
         int src;
@@ -35,29 +58,7 @@ public class CycleDetectionUndirected {
         graph[0].add(new Edge(0, 3));
     }
 
-    // Cycle Detection for Undirected Graph
-    public static boolean isCycleUndirected(ArrayList<Edge> graph[], boolean vis[], int curr, int parent) {
-
-        vis[curr] = true;
-
-        for (int i = 0; i < graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
-
-            // Case 1: Not visited → DFS
-            if (!vis[e.dest]) {
-                if (isCycleUndirected(graph, vis, e.dest, curr)) {
-                    return true;
-                }
-            }
-
-            // Case 2: Visited but not parent → Cycle
-            else if (e.dest != parent) {
-                return true;
-            }
-        }
-
-        return false;
-    }
+  
 
     public static void main(String args[]) {
 
