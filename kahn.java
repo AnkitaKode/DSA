@@ -3,7 +3,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 class kahn {
-
     static ArrayList<Integer> topoSort(ArrayList<ArrayList<Integer>> adj) {
         int n = adj.size();
         int[] indegree = new int[n];
