@@ -3,7 +3,8 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 //Priority Queue + nonnegative weight edges + directed graph + weighted graph + shortest path from source to all vertices 
-//Time Complexity: O(E log V) 
+//Time Complexity: O(E log V)  
+
 public class DijkstraAlgo {
 
     static class Edge {
