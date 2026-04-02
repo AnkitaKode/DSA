@@ -2,37 +2,9 @@ import java.util.ArrayList;
 
 // Negative weights + Detects negative cycle + Time Complexity: O(V * E) + O(E) for negative cycle check
 //The algorithm works by relaxing all edges repeatedly for V-1 times.If we can still relax any edge after V-1 iterations, it means there is a negative weight cycle in the graph.
+
+//Formula: dist[v]=min(dist[v],dist[u]+w)
 public class BellamanFordAlgo {
-
-    static class Edge {
-        int source;
-        int destination;
-        int weight;
-
-        public Edge(int s, int d, int w) {
-            this.source = s;
-            this.destination = d;
-            this.weight = w;
-        }
-    }
-
-    static void createGraph(ArrayList<Edge> graph[]) {
-
-        for (int i = 0; i < graph.length; i++) {
-            graph[i] = new ArrayList<>();
-        }
-
-        graph[0].add(new Edge(0, 1, 2));
-        graph[0].add(new Edge(0, 2, 4));
-
-        graph[1].add(new Edge(1, 2, -4));
-
-        graph[2].add(new Edge(2, 3, 2));
-
-        graph[3].add(new Edge(3, 4, 4));
-
-        graph[4].add(new Edge(4, 1, -1));// -10 for negative cycle
-    }
 
     public static void bellamanFord(ArrayList<Edge> graph[], int src, int V) {
         int dist[] = new int[V];
@@ -105,6 +77,35 @@ public class BellamanFordAlgo {
         System.out.println();
     }
 
+        static class Edge {
+        int source;
+        int destination;
+        int weight;
+
+        public Edge(int s, int d, int w) {
+            this.source = s;
+            this.destination = d;
+            this.weight = w;
+        }
+    }
+
+    static void createGraph(ArrayList<Edge> graph[]) {
+
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
+
+        graph[0].add(new Edge(0, 1, 2));
+        graph[0].add(new Edge(0, 2, 4));
+
+        graph[1].add(new Edge(1, 2, -4));
+
+        graph[2].add(new Edge(2, 3, 2));
+
+        graph[3].add(new Edge(3, 4, 4));
+
+        graph[4].add(new Edge(4, 1, -1));// -10 for negative cycle
+    }
     public static void main(String[] args) {
 
         int V = 5;
