@@ -3,7 +3,7 @@ import java.util.ArrayList;
 // Negative weights + Detects negative cycle + Time Complexity: O(V * E) + O(E) for negative cycle check
 //The algorithm works by relaxing all edges repeatedly for V-1 times.If we can still relax any edge after V-1 iterations, it means there is a negative weight cycle in the graph.
 
-//Formula: dist[v]=min(dist[v],dist[u]+w) 
+//Formula: dist[v]=min(dist[v],dist[u]+w)
 public class BellamanFordAlgo {
 
     public static void bellamanFord(ArrayList<Edge> graph[], int src, int V) {
