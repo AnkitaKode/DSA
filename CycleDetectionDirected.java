@@ -50,7 +50,7 @@ public class CycleDetectionDirected {
         rec[curr] = false;
         return false;
     }
-
+ 
     public static void main(String args[]) {
 
         int V = 4;
