@@ -12,7 +12,7 @@ public class BellamanFordAlgo {
         // Step 1: Initialize distances
         for (int i = 0; i < V; i++) {
             dist[i] = Integer.MAX_VALUE;
-        } 
+        }  
         dist[src] = 0;
 
         // Step 2: Relax edges V-1 times
