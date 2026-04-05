@@ -31,7 +31,7 @@ public class CycleDetectionDirected {
         rec[curr] = true;
 
         for (int i = 0; i < graph[curr].size(); i++) {
-   initial commit
+
             Edge e = graph[curr].get(i);
 
             // Case 1: Node already in recursion stack
