@@ -47,7 +47,7 @@ public class CycleDetectionDirected {
             }
         }
  
-        rec[curr] = false;
+        rec[curr] = false; 
         return false;
     }
  
