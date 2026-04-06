@@ -23,7 +23,7 @@ class LRUCache {
                 map.remove(firstKey);
             }
             map.put(key, value);
-        }  
+        }   
     }
 
     public static void main(String[] args) {
