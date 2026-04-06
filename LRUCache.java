@@ -14,17 +14,17 @@ class LRUCache {
         return map.get(key);
     }
 
-    // public void put(int key, int value) {
-    //     if (map.containsKey(key)) {
-    //         map.put(key, value);
-    //     } else {
-    //         if (map.size() == capacity) {
-    //             int firstKey = map.keySet().iterator().next();
-    //             map.remove(firstKey);
-    //         }
-    //         map.put(key, value);
-    //     }    
-    // }
+    public void put(int key, int value) {
+        if (map.containsKey(key)) {
+            map.put(key, value);
+        } else {
+            if (map.size() == capacity) {
+                int firstKey = map.keySet().iterator().next();
+                map.remove(firstKey);
+            }
+            map.put(key, value);
+        }    
+    }
 
     public static void main(String[] args) {
         LRUCache cache = new LRUCache(5);
